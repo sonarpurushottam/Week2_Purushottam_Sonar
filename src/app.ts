@@ -1,6 +1,13 @@
 import express from "express";
+import bodyParser from "body-parser";
+import orderFilterStoreIDRouter from "./orderFilterStoreID";
+
 const app = express();
-const PORT = 8000;
-app.listen(PORT, () => {
-  console.log(`Server is running on PORT: ${PORT}`);
+const port = 3000;
+
+app.use(bodyParser.json());
+app.use(orderFilterStoreIDRouter);
+
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
