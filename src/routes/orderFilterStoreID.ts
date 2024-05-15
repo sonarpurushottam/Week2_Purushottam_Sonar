@@ -1,6 +1,6 @@
 import express from "express";
 import { Request, Response } from "express";
-import pool from "./pgConfig";
+import pool from "../pgConfig";
 
 const router = express.Router();
 
